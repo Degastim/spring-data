@@ -1,0 +1,120 @@
+<html>
+<body>
+<h1>Actions</h1>
+</body>
+<div>
+    <h2>Events</h2>
+    <form action="events/find" method="Get">
+        <p>Find event<br></p>
+        <label for="id1">ID:</label><input id="id1" name="id">
+        <input type="submit" value="Send">
+    </form>
+    <form action="events" method="Get">
+        <p>Find events by title<br></p>
+        <label for="title2">Title:</label><input type="text" id="title2" name="title"><br>
+        <label for="pageSize2">Page size:</label><input type="text" id="pageSize2" name="pageSize"><br>
+        <label for="pageNum2">Page number:</label><input type="text" id="pageNum2" name="pageNum"><br>
+        <input type="submit" value="Send">
+    </form>
+    <form action="events" method="POST">
+        <p>Create Event<br></p>
+        <label for="title3">Title:</label><input type="text" id="title3" name="title"><br>
+        <label for="date3">Date:</label><input type="date" id="date3" name="date"><br>
+        <input type="submit" value="Send">
+    </form>
+    <form action="events" method="POST">
+        <input type="hidden" name="_method" value="delete"/>
+        <p>Delete event<br></p>
+        <label for="id4">ID:</label><input id="id4" name="id">
+        <input type="submit" value="Send">
+    </form>
+    <form action="events" method="POST">
+        <input type="hidden" name="_method" value="put"/>
+        <p>Update event<br></p>
+        <label for="id5">ID:</label><input id="id5" name="id"><br>
+        <label for="title5">Title:</label><input type="text" id="title5" name="title"><br>
+        <label for="date5">Date:</label><input type="date" id="date5" name="date"><br>
+        <input type="submit" value="Send">
+    </form>
+</div>
+
+<div>
+    <h2>Users</h2>
+    <form action="users/find" method="Get">
+        <p>Find user by id<br></p>
+        <label for="id6">ID:</label><input id="id6" name="id">
+        <input type="submit" value="Send">
+    </form>
+    <form action="users/findByEmail" method="Get">
+        <p>Find user by email<br></p>
+        <label for="email7">Email:</label><input type="email" id="email7" name="email"><br>
+        <input type="submit" value="Send">
+    </form>
+    <form action="users/findByUsername" method="Get">
+        <p>Find user by username<br></p>
+        <label for="username8">Email:</label><input type="text" id="username8" name="name"><br>
+        <label for="pageSize8">Page size:</label><input type="text" id="pageSize8" name="pageSize"><br>
+        <label for="pageNum8">Page number:</label><input type="text" id="pageNum8" name="pageNum"><br>
+        <input type="submit" value="Send">
+    </form>
+    <form action="users" method="POST">
+        <p>Create user<br></p>
+        <label for="username9">Username:</label><input type="text" id="username9" name="name"><br>
+        <label for="email9">Email:</label><input type="email" id="email9" name="email"><br>
+        <input type="submit" value="Send">
+    </form>
+    <form action="users" method="POST">
+        <input type="hidden" name="_method" value="put"/>
+        <p>Update user<br></p>
+        <label for="id10">ID:</label><input id="id10" name="id"><br>
+        <label for="username10">Username:</label><input type="text" id="username10" name="name"><br>
+        <label for="email10">Email:</label><input type="email" id="email10" name="email"><br>
+        <input type="submit" value="Send">
+    </form>
+    <form action="users" method="POST">
+        <input type="hidden" name="_method" value="delete"/>
+        <p>Delete user<br></p>
+        <label for="id11">ID:</label><input id="id11" name="id">
+        <input type="submit" value="Send">
+    </form>
+</div>
+
+<div>
+    <h2>Tickets</h2>
+    <form action="tickets" method="POST">
+        <p>Book Ticket<br></p>
+        <label for="userId12">User id:</label> <input type="number" id="userId12" name="userId">
+        <label for="eventId12">Event id:</label> <input type="number" id="eventId12" name="eventId">
+        <label for="place12">Place id:</label> <input type="number" id="place12" name="place">
+        <label for="cost12">Ticket ost :</label> <input type="number" id="cost12" name="cost">
+        <label for="ticketCategory12">Ticket category:</label>
+        <p><select id="ticketCategory12" name="category" multiple>
+            <option selected value="STANDARD">Standart</option>
+            <option value="PREMIUM">Premium</option>
+            <option value="BAR">Bar</option>
+        </select>
+            <input type="submit" value="Send">
+    </form>
+    <form action="tickets/byUser" method="GET">
+        <p>Find booked tickets by user id<br></p>
+        <label for="userId13">User id:</label><input type="number" id="userId13" name="userId">
+        <label for="pageSize13">Page size:</label><input type="number" id="pageSize13" name="pageSize">
+        <label for="pageNum13">Page number:</label><input type="number" id="pageNum13" name="pageNum">
+        <input type="submit" value="Send">
+    </form>
+    <form action="tickets/byEvent" method="GET">
+        <p>Find booked tickets by event id<br></p>
+        <label for="eventId14">User id:</label><input type="number" id="eventId14" name="eventId">
+        <label for="pageSize14">Page size:</label><input type="number" id="pageSize14" name="pageSize">
+        <label for="pageNum14">Page number:</label><input type="number" id="pageNum14" name="pageNum">
+        <input type="submit" value="Send">
+    </form>
+    <form action="tickets" method="POST">
+        <p>Delete ticket<br></p>
+        <input type="hidden" name="_method" value="delete"/>
+        <label for="ticketId15">Ticket id:</label><input type="number" id="ticketId15" name="ticketId">
+        <input type="submit" value="Send">
+    </form>
+</div>
+</html>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event</title>
+</head>
+<body>
+<h1>User</h1>
+<div>
+  <ul>
+    <th:block th:each="user:${users}">
+      <li th:utext="${user}">..</li>
+    </th:block>
+  </ul>
+  <p th:text="${result}"></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+INSERT INTO user_accounts (user_account_id,money) VALUES (1,100);
+INSERT INTO users (user_id,name,email,user_account_id) VALUES (1,'Jon','jon@gmail.com',1);
+INSERT INTO events (event_id,title,date) VALUES (1,'Dance',to_timestamp('05 Dec 2000', 'DD Mon YYYY'));

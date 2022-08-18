@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event</title>
+</head>
+<body>
+<h1>User</h1>
+<div>
+  <ul>
+    <th:block th:each="ticket:${tickets}">
+      <li th:utext="${ticket}">..</li>
+    </th:block>
+  </ul>
+  <p th:text="${result}"></p>
+  <p th:file="${result}"></p>
+  <div th:object="${file}"/>
+</div>
+</body>
+</html>
